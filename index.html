@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walid Boukries | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Walid Boukries</h1>
+      <p class="subtitle">Electrical Engineering Student — Project Portfolio</p>
+
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Audio Amplifier Design</h3>
+          <p>Multi-stage amplifier with filtering and practical measurements.</p>
+          <div class="tags">
+            <span class="tag">Analog</span>
+            <span class="tag">BJT</span>
+            <span class="tag">Altium</span>
+          </div>
+          <a href="#bandpass" class="btn">View Project</a>
+        </article>
+
+        <article class="card">
+          <h3>Traffic Light Logic Controller</h3>
+          <p>Sequential circuit with timers and state machine implementation.</p>
+          <div class="tags">
+            <span class="tag">Digital</span>
+            <span class="tag">FSM</span>
+            <span class="tag">JK Flip-Flops</span>
+          </div>
+          <a class="btn" href="#">Details (soon)</a>
+        </article>
+
+        <article class="card">
+          <h3>PCB Characterization Board</h3>
+          <p>PCB design to measure components, parasitics, and validate theory vs practice.</p>
+          <div class="tags">
+            <span class="tag">PCB</span>
+            <span class="tag">Measurement</span>
+            <span class="tag">LCR</span>
+          </div>
+          <a class="btn" href="#">Details (soon)</a>
+        </article>
+
+        <article class="card">
+          <h3>C Interactive Client Data System</h3>
+          <p>Console program using structured data and interactive “cells” to manage client info.</p>
+          <div class="tags">
+            <span class="tag">C</span>
+            <span class="tag">Data Structures</span>
+            <span class="tag">CLI</span>
+          </div>
+          <a class="btn" href="#">Details (soon)</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:34px;">
+      <h2 class="section-title">Contact</h2>
+      <p class="subtitle" style="margin:0;">
+        Email: <a href="mailto:your.email@example.com">your.email@example.com</a> •
+        LinkedIn: <a href="#" target="_blank" rel="noreferrer">link</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Walid Boukries</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <div class="container">
+    <h2>Band-Pass Filter Design (300 Hz – 3 kHz)</h2>
+
+    <h3>Project Overview</h3>
+    <p>
+      Design and validation of a 5th-order Chebyshev Type I band-pass filter 
+      with 0.5 dB ripple. The filter was designed using the insertion-loss method 
+      and implemented with R0 = 50Ω source and load impedance.
+    </p>
+
+    <h3>Design Specifications</h3>
+    <ul>
+      <li>Lower cutoff frequency: 300 Hz</li>
+      <li>Upper cutoff frequency: 3 kHz</li>
+      <li>Ripple: 0.5 dB</li>
+      <li>Filter type: Chebyshev Type I</li>
+      <li>Order: 5</li>
+    </ul>
+
+    <h3>Calculated Component Values</h3>
+    <ul>
+      <li>L1 = 5.03 mH</li>
+      <li>C1 = 5.59 µF</li>
+      <li>L2 = 19.5 mH</li>
+      <li>C2 = 1.45 µF</li>
+      <li>L3 = 7.5 mH</li>
+      <li>C3 = 3.75 µF</li>
+      <li>L4 = 19.5 mH</li>
+      <li>C4 = 1.45 µF</li>
+      <li>L5 = 5.03 mH</li>
+      <li>C5 = 5.59 µF</li>
+    </ul>
+
+    <h3>Simulation Results</h3>
+    <p>
+      AC analysis performed in Altium Designer confirmed the expected 
+      passband between 300 Hz and 3 kHz. The measured ripple in the 
+      passband was consistent with the theoretical 0.5 dB specification.
+    </p>
+
+    <h3>Practical Validation</h3>
+    <p>
+      The filter was implemented on a breadboard and measured using an oscilloscope.
+      The gain was calculated using:
+    </p>
+
+    <p><strong>Gain (dB) = 20 × log(Vout / Vin)</strong></p>
+
+    <p>
+      A -6 dB difference between simulation and practical results was observed
+      due to the internal 50Ω source resistance measurement reference.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+      The band-pass filter behavior matched theoretical predictions.
+      Despite component tolerances and parasitic resistances,
+      the filter maintained correct cutoff frequencies and expected Chebyshev ripple.
+    </p>
+
+  </div>
+</section>
+...
+</main>
+
+<section id="bandpass" class="project-detail">
+  <div class="container">
+    <h2>Band-Pass Filter Design (300 Hz – 3 kHz)</h2>
+    <p>This project presents the design of a 5th-order Chebyshev Type I band-pass filter.</p>
+  </div>
+</section>
+</body>
+</html>
